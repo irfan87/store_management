@@ -58,5 +58,6 @@ gem 'responders'
 gem 'prawn'
 gem 'prawn-table'
 gem 'devise'
+gem 'mini_racer'
 
 ruby "2.4.0"
