@@ -59,5 +59,6 @@ gem 'prawn'
 gem 'prawn-table'
 gem 'devise'
 gem 'mini_racer'
+gem 'jquery-ui-rails'
 
 ruby "2.4.0"
