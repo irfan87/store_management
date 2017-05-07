@@ -1,0 +1,31 @@
+<%= form_for @store do |f| %>
+	<%= render 'stores/alert', object: @store %>
+	<div class="form-group">
+		<%= f.label :name, 'Store Name'.upcase %>
+		<%= f.text_field :name, placeholder: 'Store Name', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :address, 'Store Address'.upcase %>
+		<%= f.text_area :address, placeholder: 'Store Address', cols: 2, rows: 5, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :postcode, 'Store Postcode'.upcase %>
+		<%= f.text_field :postcode, placeholder: 'Store Postcode', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :province, 'Store Province'.upcase %>
+		<%= f.text_field :province, placeholder: 'Store Provice', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :state, 'Store State'.upcase %>
+		<%= f.text_field :state, placeholder: 'Store State', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :phone_number, 'Store Phone Number'.upcase %>
+		<%= f.text_field :phone_number, placeholder: 'Store Phone Number', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.submit 'Save', class: 'btn btn-primary' %>
+		<%= link_to 'Back', root_path, class: 'btn btn-danger' %>
+	</div>
+<% end %>

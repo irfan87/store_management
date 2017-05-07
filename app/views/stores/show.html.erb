@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="col-md-12">
+		<div>
+			<h1>Your Stores Information</h1>
+		</div>
+		<div class="panel">
+			<div class="panel-body">
+				<p>
+					<h3>
+						<strong>
+							<%= @store.name %>
+						</strong>
+					</h3>
+					<p>
+						<%= @store.address %>
+					</p>
+					<p>
+						<%= @store.postcode %>
+					</p>
+					<p>
+						<%= @store.province %>
+					</p>
+					<p>
+						<%= @store.state %>
+					</p>
+					<p>
+						<%= @store.phone_number %>
+					</p>
+				</p>
+			</div>
+		</div>
+		<div>
+			<%= link_to 'Edit Store', edit_store_path(@store), class: 'btn btn-info' %>
+			<%= link_to 'Previous Page', root_path, class: 'btn btn-danger' %>
+		</div>
+	</div>
+</div>
