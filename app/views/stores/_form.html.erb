@@ -1,5 +1,4 @@
 <%= form_for @store do |f| %>
-	<%= render 'stores/alert', object: @store %>
 	<div class="form-group">
 		<%= f.label :name, 'Store Name'.upcase %>
 		<%= f.text_field :name, placeholder: 'Store Name', class: 'form-control' %>
