@@ -11,8 +11,10 @@
   <body>
   	<%= render 'layouts/navbar' %>
     <%= render 'partials/notice' %>
-    <div class="col-md-10 col-xs-offset-1">
-      <%= yield %>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
