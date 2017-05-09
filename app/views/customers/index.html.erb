@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="col-md-10 col-xs-offset-1">
+	<div class="">
 		<div>
 			<h1>
 				Customers List
@@ -22,7 +22,7 @@
 							<th class="text-center">State</th>
 							<th class="text-center">Phone</th>
 							<th class="text-center">Store</th>
-							<th class="text-center" colspan="2">Actions</th>
+							<th class="text-center">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -38,8 +38,10 @@
 								<td><%= customer.state %></td>
 								<td class="text-center"><%= customer.phone_number %></td>
 								<td><%= link_to customer.store.name, store_path(customer.store) %></td>
-								<td><%= link_to 'Generate as PDF', customer_path(customer, format: 'pdf'), class: 'btn btn-xs btn-info' %></td>
-								<td><%= link_to 'Remove Customer', customer_path(customer), method: :delete, data: {confirm: 'You are about to delete this customer from your database. Are you sure want to continue?'}, class: 'btn btn-xs btn-danger' %></td>
+								<td class="text-center">
+									<%= link_to 'Generate as PDF', customer_path(customer, format: 'pdf'), class: 'btn btn-xs btn-info' %>
+									<%= link_to 'Remove Customer', customer_path(customer), method: :delete, data: {confirm: 'You are about to delete this customer from your database. Are you sure want to continue?'}, class: 'btn btn-xs btn-danger' %>
+								</td>
 							</tr>
 						<% end %>
 					</tbody>
