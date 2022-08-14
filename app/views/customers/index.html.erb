@@ -1,55 +1,53 @@
 <div class="container">
-	<div class="">
-		<div>
-			<h1>
-				Customers List
-			</h1>
-			<div>
-				<%= link_to 'Create Customer', new_customer_path, class: 'btn btn-primary' %>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="table-responsive">
-			<%= form_tag check_all_customers_path do %>
-				<table class="table table-condensed">
-					<thead>
-						<tr>
-							<th></th>
-							<th class="text-center">Name</th>
-							<th class="text-center">Address</th>
-							<th class="text-center">Postcode</th>
-							<th class="text-center">Province</th>
-							<th class="text-center">State</th>
-							<th class="text-center">Phone</th>
-							<th class="text-center">Store</th>
-							<th class="text-center">Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<% @customers.each do |customer| %>
-							<tr>
-								<td>
-									<%= check_box_tag 'customer_ids[]', customer.id %>
-								</td>
-								<td><%= link_to customer.name, edit_customer_path(customer) %></td>
-								<td><%= customer.address %></td>
-								<td class="text-center"><%= customer.postcode %></td>
-								<td><%= customer.province %></td>
-								<td><%= customer.state %></td>
-								<td class="text-center"><%= customer.phone_number %></td>
-								<td><%= link_to customer.store.name, store_path(customer.store) %></td>
-								<td class="text-center">
-									<%= link_to 'Generate as PDF', customer_path(customer, format: 'pdf'), class: 'btn btn-xs btn-info' %>
-									<%= link_to 'Remove Customer', customer_path(customer), method: :delete, data: {confirm: 'You are about to delete this customer from your database. Are you sure want to continue?'}, class: 'btn btn-xs btn-danger' %>
-								</td>
-							</tr>
-						<% end %>
-					</tbody>
-				</table>
-				<span class="has-tooltip" data-toggle="tooltip" title="Coming Soon...">
-					<%= link_to 'Generate all as PDF', generate_pdf_customers_path, class: 'btn disabled' %>
-				</span>
-			<% end %>
-		</div>
-	</div>
+  <div class="">
+    <div>
+      <h1>
+        Customers List
+      </h1>
+      <div>
+        <%= link_to 'Create Customer', new_customer_path, class: 'btn btn-primary' %>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="table-responsive">
+      <%= form_tag check_all_customers_path do %>
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Address</th>
+              <th class="text-center">Postcode</th>
+              <th class="text-center">Province</th>
+              <th class="text-center">State</th>
+              <th class="text-center">Phone</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @customers.each do |customer| %>
+              <tr>
+                <td>
+                  <%= check_box_tag 'customer_ids[]', customer.id %>
+                </td>
+                <td><%= link_to customer.name, edit_customer_path(customer) %></td>
+                <td><%= customer.address %></td>
+                <td class="text-center"><%= customer.postcode %></td>
+                <td><%= customer.province %></td>
+                <td><%= customer.state %></td>
+                <td class="text-center"><%= customer.phone_number %></td>
+                <td class="text-center">
+                  <%= link_to 'Generate as PDF', customer_path(customer, format: 'pdf'), class: 'btn btn-xs btn-info' %>
+                  <%= link_to 'Remove Customer', customer_path(customer), method: :delete, data: {confirm: 'You are about to delete this customer from your database. Are you sure want to continue?'}, class: 'btn btn-xs btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <span class="has-tooltip" data-toggle="tooltip" title="Coming Soon...">
+          <%= link_to 'Generate all as PDF', generate_pdf_customers_path, class: 'btn disabled' %>
+        </span>
+      <% end %>
+    </div>
+  </div>
 </div>

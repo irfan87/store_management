@@ -10,15 +10,11 @@
       </button>
       <%= link_to 'Store Management', redirect_to_main_page, class: 'navbar-brand' %>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-        	<%= link_to 'Stores', stores_path %>
-        </li>
-        <li>
-					<%= link_to 'Customers', customers_path %>
+          <%= link_to 'Customers', customers_path %>
         </li>
       </ul>
       <% if current_user %>
@@ -44,6 +40,8 @@
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         </ul>
       <% end %>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>

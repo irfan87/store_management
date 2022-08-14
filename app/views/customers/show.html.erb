@@ -1,44 +1,40 @@
 <div class="col-md-12">
-	<div>
-		<h1>Your Customer Information</h1>
-	</div>
-	<div class="panel">
-		<div class="panel-body">
-			<p>
-				<h3>
-					<strong>
-						<%= @customer.name %>
-					</strong>
-				</h3>
-				<p>
-					<strong>Customer Address</strong>
-					<%= @customer.address %>
-				</p>
-				<p>
-					<strong>Customer Postcode</strong>
-					<%= @customer.postcode %>
-				</p>
-				<p>
-					<strong>Customer Province</strong>
-					<%= @customer.province %>
-				</p>
-				<p>
-					<strong>Customer State</strong>
-					<%= @customer.state %>
-				</p>
-				<p>
-					<strong>Customer Phone Number</strong>
-					<%= @customer.phone_number %>
-				</p>
-				<p>
-					<strong>Store Name</strong>
-					<%= @customer.store.name %>
-				</p>
-			</p>
-		</div>
-	</div>
-	<div>
-		<%= link_to 'Edit Customer', edit_customer_path(@customer), class: 'btn btn-info' %>
-		<%= link_to 'Previous Page', customers_url, class: 'btn btn-danger' %>
-	</div>
+  <div>
+    <h1>Your Customer Information</h1>
+  </div>
+  <div class="panel">
+    <div class="panel-body">
+      <p>
+        <h3>
+          <strong>
+            <%= @customer.name %>
+          </strong>
+        </h3>
+        <p>
+          <strong>Customer Address</strong>
+          <%= @customer.address %>
+        </p>
+        <p>
+          <strong>Customer Postcode</strong>
+          <%= @customer.postcode %>
+        </p>
+        <p>
+          <strong>Customer Province</strong>
+          <%= @customer.province %>
+        </p>
+        <p>
+          <strong>Customer State</strong>
+          <%= @customer.state %>
+        </p>
+        <p>
+          <strong>Customer Phone Number</strong>
+          <%= @customer.phone_number %>
+        </p>
+      </p>
+    </div>
+  </div>
+  <div>
+    <%= link_to 'Edit Customer', edit_customer_path(@customer), class: 'btn btn-info' %>
+    <%= link_to 'Previous Page', customers_url, class: 'btn btn-danger' %>
+  </div>
 </div>

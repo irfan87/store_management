@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path(resource_or_scope)
-  	URI.parse(request.referer).path if request.referer
+  	# URI.parse(request.referer).path if request.referer
+    request.referrer || root_path
   end
 end
