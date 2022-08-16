@@ -23,7 +23,7 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+# gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -65,3 +65,5 @@ gem 'matrix', '~> 0.4.2'
 gem 'pg', '~> 1.1'
 
 gem 'postgresql', '~> 1.0'
+
+gem "rails-ujs", "~> 0.1.0"

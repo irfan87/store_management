@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  get 'welcome_pages/index'
+  # get 'welcome_pages/index'
 
-  devise_for :users, path: '', path_names: {
-    sign_in: 'login',
-    sign_out: 'logout',
-    registration: 'register'
-  }
-  root 'welcome_pages#index'
+  get 'customers/index', as: '/customers'
+
+  devise_for :users
+
+  scope '/admin' do
+    resources :users
+  end
+
+  # root 'welcome_pages#index'
+  root 'customers#index'
 
   resources :customers do
     collection do

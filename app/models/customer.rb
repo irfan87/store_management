@@ -5,4 +5,6 @@ class Customer < ApplicationRecord
   validates :province, presence: true
   validates :state, presence: true
   validates :phone_number, presence: true, numericality: { only_integer: true }
+
+  belongs_to :user
 end
